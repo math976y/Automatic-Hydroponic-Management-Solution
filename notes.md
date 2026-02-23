@@ -1,12 +1,14 @@
 Projekter:
-- 
-
-
-
-Home assistant:
 - Auto plante vanding/gødning
-- Hjemmestyrings modul (ESP32)
+  - Hydroponics
 
-Opgradering:
-- Gøre hjemmet klogt (home assistant)
+Vigtige links:
+- DIY hydropodnics https://www.youtube.com/watch?v=nyqykZK2Ev4
+- Nutrient river technique https://www.youtube.com/watch?v=TZ3mADyfNOg
+
+
+
+Peristaltic pump
+
+
 
