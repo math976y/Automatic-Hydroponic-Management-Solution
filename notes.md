@@ -1,3 +1,9 @@
+Eksamen:
+- Rapport: min 30 normalsider
+- Eksamen: 2 timer
+
+
+
 Projekter:
 - Auto plante vanding/gødning
   - Hydroponics
