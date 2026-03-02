@@ -18,3 +18,8 @@ Peristaltic pump
 
 
 
+Planter:
+- Krydderurter
+- Planteskole planter, så de bliver hurtigere klar
+  - Tomater
+
