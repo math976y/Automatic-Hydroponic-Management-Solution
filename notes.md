@@ -15,6 +15,10 @@ Vigtige links:
 - Three dollar EC sensor https://hackaday.io/project/7008-hacking-the-way-to-growing-food/log/24646-three-dollar-ec-ppm-meter-arduino
 - Which Hydroponic System Should You Choose? https://www.youtube.com/watch?v=2e9a0PNLKMk
 - Kabelkanal 2m https://www.harald-nyborg.dk/kabelkanal-15-x-15-mm-2-m-hvid
+- Nutrient Film Technique: You’re Doing it Wrong! https://www.youtube.com/watch?v=IOzJllpbs1Y
+- https://hydroponics.dk/
+- pH elektrode https://arduinotech.dk/shop/ph-analytical-survey-electrode-sensor/
+
 
 
 Overvejelser:
@@ -32,6 +36,8 @@ Peristaltic pump
 
 Planter:
 - Krydderurter
+- Salat
+- Jordbær
 - Planteskole planter, så de bliver hurtigere klar
   - Tomater
 
