@@ -28,6 +28,7 @@ Overvejelser:
 - Sensorer / ting der skal kontrolleres
   - pH-meter
   - Electrical conductivity / gødningssensor
+- Selvvandende grobed
 
 
 Peristaltic pump
@@ -40,4 +41,26 @@ Planter:
 - Jordbær
 - Planteskole planter, så de bliver hurtigere klar
   - Tomater
+
+
+DIY EC sensor:
+- Stikkontakt som elektrode
+- Wheatstone bridge eller voltage divider
+- Temp sensor
+- Kalibreringsvæske
+- Teoretisk beregning af EC af saltvand: https://en.wikipedia.org/wiki/Conductivity_(electrolytic)
+
+
+
+Indkøbsliste:
+- Gødning
+- EC kalibreringsvæske
+- Ventilation
+- Potter
+- Spirebakker
+- Frø / Større planter fra planteskole
+- Floatswitch
+- Gromedie
+- Vat til NFT medie
+- Evt. powerbank som UPS
 
