@@ -38,8 +38,8 @@ Peristaltic pump
 Planter:
 - Krydderurter
 - Salat
-- Jordbær
 - Planteskole planter, så de bliver hurtigere klar
+  - Jordbær
   - Tomater
 
 
