@@ -1,34 +1,60 @@
 <script lang="ts">
-	import { getDir } from "$lib/listDir.remote";
+	import { useTRPC } from "$lib/trpc/client.svelte";
+	import type { ECVal, HumidifierVal, PhVal } from "$lib/trpc/router";
+	import { onMount } from "svelte";
+    import NumberDisplay from "$lib/numberDisplay.svelte";
 	import Slider from "$lib/slider.svelte";
+	import Checkbox from "$lib/checkbox.svelte";
 
-    let val = $state(3);
-    let val2 = $state(3);
-    let val3 = $state(3);
-    let val4 = $state(3);
+    
+    let t = useTRPC();
 
-    let items = $state(getDir());
+    let phVal: PhVal|undefined = $state();
+    let humidifierVal: HumidifierVal|undefined = $state();
+    let ecVal: ECVal|undefined = $state();
+    let pumpOn = $state(false);
+    let humiditySetPoint = $state(60);
+    onMount(() => {
+        t.onPumpVal.subscribe(undefined, {
+            onData: (val => {
+                pumpOn = val;
+            })
+        })
+        t.onPhVal.subscribe(undefined, {
+            onData: (val => {
+                phVal = val;
+            })
+        })
+        t.onHumidifierVal.subscribe(undefined, {
+            onData: (val => {
+                humidifierVal = val;
+            })
+        })
+        t.onECVal.subscribe(undefined, {
+            onData: (val => {
+                ecVal = val;
+            })
+        })
+        t.onHumiditySetPoint.subscribe(undefined, {
+            onData: (val => {
+                humiditySetPoint = val
+            })
+        })
+    })
 
-    async function update() {
-        await getDir().refresh()
-    }
 </script>
 
 <h1>Drivhus kontrolpanel</h1>
-<Slider bind:value={val} step={.1} title="Værdi"/>
-<Slider bind:value={val2} step={.1} title="Værdi 2"/>
-<Slider bind:value={val3} step={.1} title="Værdi 3"/>
-<Slider bind:value={val4} step={.1} title="Værdi 4"/>
 
-<p>Slider val is {val}</p>
+<NumberDisplay title="pH værdi" val={phVal?.pH} />
+<NumberDisplay title="EC værdi" val={ecVal?.EC} />
+<NumberDisplay title="Temperatur" val={humidifierVal?.temperature} />
+<NumberDisplay title="Luftfugtighed" val={humidifierVal?.humidity} />
 
-<button onclick={() => update()}>Load</button>
+<Slider min={0} max={100} step={1} bind:value={humiditySetPoint} title="Enable humidifier at (%)" onchange={() => {
+    t.setHumiditySetPoint.query(humiditySetPoint);
+}} />
 
-<ol>
-    {#await items then list}
-        
-        {#each list as item}
-        <li>{item}</li>
-        {/each}
-    {/await}
-</ol>
+<Checkbox title="Pump 1" bind:checked={pumpOn} onchange={() => {
+    t.setPump.query(pumpOn)
+    }} />
