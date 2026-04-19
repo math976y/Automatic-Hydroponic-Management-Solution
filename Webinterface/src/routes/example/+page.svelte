@@ -1,6 +1,6 @@
 <script>
-    // Importer tællemaskinen fra sin egen fil
-	import Counter from "./counter.svelte";
+	// Importer tællemaskinen fra sin egen fil
+	import Counter from './counter.svelte';
 </script>
 
 <p>Herunder ses en fuld funktionel tællemaskine:</p>
